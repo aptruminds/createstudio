@@ -133,5 +133,3 @@ Private repository.
 - Ayush Pathak (ayush.pathak@truminds.com)
 
 ---
-
-**Built with ❤️ by CREATE STUDIO**
