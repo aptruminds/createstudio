@@ -1,0 +1,7 @@
+.DS_Store
+*.mov
+*.mp4
+!site-next/public/**/*.mp4
+node_modules/
+.next/
+.vercel
