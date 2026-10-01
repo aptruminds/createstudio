@@ -135,7 +135,30 @@ export default function SectionContactForm() {
     e.preventDefault();
     const errs=validate(values);
     if(Object.keys(errs).length){ setErrors(errs); return; }
+
+    const body = `
+Hi,
+
+I'm interested in your services. Here are my details:
+
+NAME: ${values.name}
+EMAIL: ${values.email}
+PHONE: ${values.code} ${values.phone}
+COMPANY: ${values.company}
+SERVICE: ${values.service}${values.service === 'Other (describe below)' ? `\nDESCRIPTION: ${values.customService}` : ''}
+
+MESSAGE:
+${values.message}
+
+---
+Sent via Create Studio Contact Form
+`.trim();
+
+    const subject = `New Inquiry from ${values.name} - ${values.company}`;
+    const mailtoUrl = `mailto:sales@thecreate.studio?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
     setSent(true);
+    setTimeout(() => window.location.href = mailtoUrl, 400);
   }
 
   const border = (k:keyof F) => errors[k]?'rgba(255,107,107,0.7)':focused===k?'rgba(255,255,255,0.35)':'rgba(255,255,255,0.1)';
