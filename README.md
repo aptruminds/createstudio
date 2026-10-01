@@ -130,8 +130,8 @@ Private repository.
 
 ## 👥 Contributors
 
+- Kaushal Batra (kaushal.batra@truminds.com)
 - Ayush Pathak (ayush.pathak@truminds.com)
+- Vivek Shitwal (vivek.shitwal@truminds.com)
 
 ---
-
-**Built with ❤️ by CREATE STUDIO**
